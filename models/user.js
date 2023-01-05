@@ -3,8 +3,8 @@ const userSchema = Schema({
   name: {
     type: String,
     required: true,
-    minlength: 3,
-    maxlength: 10,
+    minlength: 3
+    
   },
   email: {
     type: String,
@@ -26,12 +26,12 @@ const userSchema = Schema({
   //   required: true,
   //   default: ["STUDENT"],
   // },
-  accountStatus: {
-    type: String,
-    enum: ["ACTIVE", "PENDING", "REJECTED"],
-    default: "ACTIVE",
-    required: true,
-  },
+  // accountStatus: {
+  //   type: String,
+  //   enum: ["ACTIVE", "PENDING", "REJECTED"],
+  //   default: "ACTIVE",
+  //   required: true,
+  //},
 });
 const User = model("User", userSchema);
 module.exports = User;
